@@ -1,11 +1,11 @@
-/*=============== GOOGLE FONTS ===============*/
+/* GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
 
-/*=============== VARIABLES CSS ===============*/
+/* VARIABLES CSS */
 :root {
-  --header-height: 3.5rem;
+  --header-height: 56px;
 
-  /*========== Colors ==========*/
+  /* Colors */
   --hue: 14;
   --first-color: hsl(var(--hue), 91%, 54%);
   --first-color-alt: hsl(var(--hue), 91%, 50%);
@@ -15,31 +15,31 @@
   --body-color: linear-gradient(90deg, hsl(104, 28%, 40%) 0%, hsl(58, 28%, 40%) 100%);
   --container-color: linear-gradient(136deg, hsl(104, 28%, 35%) 0%, hsl(58, 28%, 35%) 100%);
 
-  /*========== Font and typography ==========*/
+  /* Font and typography */
   --body-font: 'Poppins', sans-serif;
-  --biggest-font-size: 2rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --biggest-font-size: 32px;
+  --h1-font-size: 24px;
+  --h2-font-size: 20px;
+  --h3-font-size: 16px;
+  --normal-font-size: 15px;
+  --small-font-size: 13px;
+  --smaller-font-size: 12px;
 
-  /*========== Font weight ==========*/
+  /* Font weight */
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-black: 900;
 
-  /*========== Margenes Bottom ==========*/
-  --mb-0-25: .25rem;
-  --mb-0-5: .5rem;
-  --mb-0-75: .75rem;
-  --mb-1: 1rem;
-  --mb-1-5: 1.5rem;
-  --mb-2: 2rem;
-  --mb-2-5: 2.5rem;
+  /* Margenes Bottom */
+  --mb-0-25: 4px;
+  --mb-0-5: 8px;
+  --mb-0-75: 12px;
+  --mb-1: 16px;
+  --mb-1-5: 24px;
+  --mb-2: 32px;
+  --mb-2-5: 40px;
 
-  /*========== z index ==========*/
+  /* z index */
   --z-tooltip: 10;
   --z-fixed: 100;
 }
@@ -47,17 +47,17 @@
 /* Responsive typography */
 @media screen and (min-width: 992px) {
   :root {
-    --biggest-font-size: 4rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --biggest-font-size: 64px;
+    --h1-font-size: 36px;
+    --h2-font-size: 24px;
+    --h3-font-size: 20px;
+    --normal-font-size: 16px;
+    --small-font-size: 14px;
+    --smaller-font-size: 13px;
   }
 }
 
-/*=============== BASE ===============*/
+/* BASE */
 *{
   box-sizing: border-box;
   padding: 0;
@@ -106,7 +106,7 @@ button{
   font-size: var(--normal-font-size);
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+/* REUSABLE CSS CLASSES */
 .section{
   padding: 4.5rem 0 2rem;
 }
@@ -117,7 +117,7 @@ button{
   text-align: center;
 }
 
-/*=============== LAYOUT ===============*/
+/* LAYOUT */
 .container{
   max-width: 968px;
   margin-left: var(--mb-1-5);
@@ -132,14 +132,97 @@ button{
   overflow: hidden; /*For animation*/
 }
 
-/*=============== HEADER ===============*/
+/* HEADER */
+.header {
+  width: 100%;
+  background: var(--body-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+}
 
+/* NAV */
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-/*=============== NAV ===============*/
+.nav_logo {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  font-weight: var(--font-medium);
+}
 
+.nav_logo-img{
+  width: 20px;
+}
+
+.nav_link,
+.nav_logo,
+.nav_toggle,
+.nav_close {
+  color: var(--title-color);
+}
+
+.nav_toggle {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .nav_menu {
+    position: fixed;
+    width: 100%;
+    background: var(--container-color);
+    top: -150%;
+    left: 0;
+    padding: 56px 0;
+    transition: 0.4s;
+    z-index: var(--z-fixed);
+    border-radius: 0 0 24px 24px;
+  }
+}
+
+.nav_img {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nav_close {
+  font-size: 29px;
+  position: absolute;
+  top: 8px;
+  right: 11px;
+  cursor: pointer;
+}
+
+.nav_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 24px;
+}
+
+.nav_link {
+  text-transform: uppercase;
+  font-weight: var(--font-black);
+  transition: 0.4s;
+}
+
+.nav_link:hover {
+  color: var(--text-color);
+}
 
 /* Show menu */
-
+.show-menu {
+  top: 0;
+}
 
 /* Change background header */
 
@@ -147,46 +230,46 @@ button{
 /* Active link */
 
 
-/*=============== HOME ===============*/
+/* HOME */
 
 
 /* Swiper Class */
 
 
-/*=============== BUTTONS ===============*/
+/* BUTTONS */
 
 
-/*=============== CATEGORY ===============*/
+/* CATEGORY */
 
 
-/*=============== ABOUT ===============*/
+/* ABOUT */
 
 
-/*=============== TRICK OR TREAT ===============*/
+/* TRICK OR TREAT */
 
 
-/*=============== DISCOUNT ===============*/
+/* DISCOUNT */
 
 
-/*=============== NEW ARRIVALS ===============*/
+/* NEW ARRIVALS */
 
 
-/*=============== NEWSLETTER ===============*/
+/* NEWSLETTER */
 
 
-/*=============== FOOTER ===============*/
+/* FOOTER */
 
 
-/*=============== SCROLL UP ===============*/
+/* SCROLL UP */
 
 
 /* Show Scroll Up*/
 
 
-/*=============== SCROLL BAR ===============*/
+/* SCROLL BAR */
 
 
-/*===============  BREAKPOINTS ===============*/
+/*  BREAKPOINTS */
 /* For small devices */
 
 
