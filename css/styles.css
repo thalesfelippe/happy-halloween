@@ -111,7 +111,7 @@ button{
   padding: 4.5rem 0 2rem;
 }
 
-.section__title{
+.section_title{
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-2);
   text-align: center;
@@ -231,13 +231,137 @@ button{
 
 
 /* HOME */
+.home_content {
+  row-gap: 16px;
+}
 
+.home_group {
+  display: grid;
+  position: relative;
+  padding-top: 32px;
+}
 
+.home_img {
+  height: 250px;
+  justify-self: center;
+}
+
+.home_indicator {
+  width: 8px;
+  height: 8px;
+  background: var(--title-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 112px;
+  right: 32px;
+}
+
+.home_indicator::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 48px;
+  background: var(--title-color);
+  top: -48px;
+  right: 45%;
+}
+
+.home_details-img {
+  position: absolute;
+  right: 8px;
+}
+
+.home_details-title,
+.home_details-subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  text-align: right;
+}
+
+.home_subtitle {
+  font-size: var(--h3-font-size);
+  text-transform: uppercase;
+  margin-bottom: var(--mb-1);
+}
+
+.home_title {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-black);
+  line-height: 109%;
+  margin-bottom: var(--mb-1);
+}
+
+.home_description {
+  margin-bottom: var(--mb-1);
+}
+
+.home_buttons {
+  display: flex;
+  justify-content: space-between;
+}
 /* Swiper Class */
+.swiper-pagination {
+  position: initial;
+  margin-top: var(--mb-1);
+}
 
+.swiper-pagination-bullet {
+  width: 5px;
+  height: 5px;
+  background-color: var(--title-color);
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  margin: 0 8px;
+}
+
+.swiper-pagination-bullet-active {
+  width: 24px;
+  height: 5px;
+  border-radius: 8px;
+}
 
 /* BUTTONS */
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--title-color);
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+}
 
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.button-icon {
+  font-size: 20px;
+}
+
+.button-ghost{
+  border: 2px solid;
+  background-color: transparent;
+  border-radius: 48px;
+  padding: 12px 24px;
+}
+
+.button-ghost:hover {
+  background: none;
+}
+
+.button-link {
+  color: var(--title-color);
+}
+
+.button-flex {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 8px;
+}
 
 /* CATEGORY */
 
