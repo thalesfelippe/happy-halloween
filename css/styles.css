@@ -225,7 +225,9 @@ button{
 }
 
 /* Change background header */
-
+.scroll-header {
+  background: var(--container-color);
+}
 
 /* Active link */
 
@@ -298,6 +300,7 @@ button{
 .home_buttons {
   display: flex;
   justify-content: space-between;
+  margin-top: 15px;
 }
 /* Swiper Class */
 .swiper-pagination {
@@ -364,7 +367,28 @@ button{
 }
 
 /* CATEGORY */
+.category_container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 32px;
+}
 
+.category_data {
+  text-align: center;
+}
+
+.category_img {
+  width: 120px;
+  margin-bottom: var(--mb-0-75);
+  transition: 0.3s;
+}
+
+.category_title {
+  margin-bottom: var(--mb-0-25);
+}
+
+.category_data:hover .category_img {
+  transform: translateY(-8px);
+}
 
 /* ABOUT */
 
