@@ -571,8 +571,31 @@ button{
 .new_content:hover .new_button {
   right: 0;
 }
-/* NEWSLETTER */
 
+/* NEWSLETTER */
+.newsletter_description {
+  text-align: center;
+  margin-bottom: var(--mb-1-5);
+}
+
+.newsletter_form {
+  background: var(--container-color);
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+
+.newsletter_input {
+  width: 70%;
+  padding: 0 8px;
+  background: none;
+  color: var(--title-color);
+}
+
+.newsletter_input::placeholder {
+  color: var(--text-color);
+}
 
 /* FOOTER */
 

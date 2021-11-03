@@ -49,11 +49,6 @@ let newSwiper = new Swiper(".new-swiper", {
     slidesPerView: 'auto',
     spaceBetween: 16,
     loop: 'true',
-
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-    },
 });
 
 /* SCROLL SECTIONS ACTIVE LINK */
