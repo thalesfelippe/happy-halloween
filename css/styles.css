@@ -469,7 +469,26 @@ button{
 }
 
 /* DISCOUNT */
+.discount_container {
+  background: var(--container-color);
+  border-radius: 16px;
+  padding: 40px 0 24px;
+  row-gap: 12px;
+}
 
+.discount_data {
+  text-align: center;
+}
+
+.discount_title {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-2);
+}
+
+.discount_img {
+  width: 200px;
+  justify-self: center;
+}
 
 /* NEW ARRIVALS */
 
